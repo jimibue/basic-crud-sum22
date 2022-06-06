@@ -30,6 +30,10 @@ class Api::ThingsController < ApplicationController
         render json: @thing.destroy
     end
 
+    def frank
+      render json: {x: params[:trucky], y:params[:yo]}
+    end
+
     private
 
     def set_thing

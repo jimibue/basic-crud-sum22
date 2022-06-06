@@ -1,18 +1,43 @@
 # README
 
-items api
+### create a rails project
+```
+# create a rails project
+rails new project-name -d postgresql --api
 
-http://localhost:3001/api/items
-get '/api/items'  => items controller#index => list of items
+# create a model
+rails g model model_name attr1:type attr2:type
 
-http://localhost:3001/api/items/1
-get '/api/items/:id'  => items controller#show => one item
+# delete a model (make singular named model)
+rails d model model_name
 
-http://localhost:3001/api/items
-post '/api/items' *need to send item data  => items controller#create => create an item
+# create a controller (plural of model name)
+rails g controller api/model_names
 
-http://localhost:3001/api/items/1
-put '/api/items/:id' ' *need to send item data  => items controller#update => updates an  item
+# delete a controller
+rails d controller model_names
 
-http://localhost:3001/api/items/1
-delete '/api/items/:id' '   => items controller#destroy => deletes an  item
+# create a db (after you create your app)
+rails db:create
+
+# migrate a db (after you create a model)
+rails db:migrate
+
+# seed a db (run your seeds.rb file)
+rails db:seed
+
+# drop a db (destroy your db)
+rails db:seed
+
+# all at the same time (destroy your db, recreate, migrate, seed)
+rails db:drop db:create db:migrate db:seed
+--or--
+rails db:reset
+
+```
+
+### create a model 
+```
+rails
+```
+
